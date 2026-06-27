@@ -95,7 +95,7 @@
       document.getElementById('h'+i).classList.toggle('punched', punched);
     });
   }
-  function resetAll() { const s=[false,false,false,false,false,false]; saveState(s); applyState(s); }
+  function resetAll() { state.fill(false); saveState(state); applyState(state); }
   const state = loadState();
   applyState(state);
   for (let i=0;i<6;i++) {
